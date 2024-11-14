@@ -2,9 +2,7 @@ public class Carro extends Vehiculo {
     private String marca;
     private String modelo;
 
-    public Carro(String marca, String modelo) {
-        this.marca = marca;
-        this.modelo = modelo;
+    public Carro() {
     }
 
     public String getMarca() {

@@ -9,6 +9,9 @@ public class Estudiante extends Usuario{
         this.activo = activo;
     }
 
+    public Estudiante() {
+    }
+
     @Override
     public void mostrarInfo(){
         System.out.println("El usuario es Estudiante, nombre: "+getNombre()+", documento: "+getCedula()+", el usuario esta "+(getActivo() ? "Activo":"Desactivo")+" en el sistema");
