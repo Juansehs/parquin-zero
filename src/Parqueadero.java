@@ -1,15 +1,12 @@
 import java.time.LocalDateTime;
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.HashMap;
-import java.util.List;
+import java.util.*;
 
 public class Parqueadero {
 
     private String nombre;
-    //  key,value
+    //key(parqueadero),value(informacion registro)
     //{[a02,Registro:{Vehiculo,Usuario,horaEntrada,horaSalida}]}
-    private HashMap<String,Registro> vehiculos;
+    private HashMap<String,Registro> vehiculos = new HashMap<>();
     private int cantidadEspaciosTotal;
     private List<Registro> historialTotalVehiculos;
     //[a01-a02-a03-a04-b01-b02-b03]
@@ -70,7 +67,7 @@ public class Parqueadero {
                 '}';
     }
 
-    public void mostrarHistorial(LocalDateTime fechaHoraInicioFiltro, LocalDateTime fechaHoraFinFiltro){
+    public void mostrarHistorial(){
         for (Registro historialTotalVehiculo : historialTotalVehiculos) {
             System.out.println(historialTotalVehiculo);
         }
@@ -95,15 +92,23 @@ public class Parqueadero {
     public void mostrarVehiculosActivosParquedero(){
         System.out.println("los vehiculos actualmente que se encuentran en el parqueadero:");
         for (String parqueadero : vehiculos.keySet()){
-            System.out.println(vehiculos.get(parqueadero).getHoraEntrada()+" - "+vehiculos.get(parqueadero).getVehiculo());
+            System.out.println(vehiculos.get(parqueadero).getHoraEntrada()+" - "+vehiculos.get(parqueadero).getVehiculo()+" - "+vehiculos.get(parqueadero).getUsuario()+" - hora de entrada: "+vehiculos.get(parqueadero).getHoraEntrada());
         }
     }
     public void agregarRegistro(){
-        System.out.println("Escribe el nombre del parqueadero en el que vas a estacionar:");
+        Scanner input = new Scanner(System.in);
         List<String> parqueaderos = this.mostrarEspaciosLibres();
-
+        while (true){
+            Registro registroUsu = new Registro();
+            System.out.println("Estos son los parquederos disponibles, Escribe el nombre del parqueadero en el que vas a estacionar:");
+            System.out.println(parqueaderos);
+            String parqueaderoEscogido = input.next();
+            if(!parqueaderos.contains(parqueaderoEscogido)) continue;
+            registroUsu.realizarRegistro();
+            vehiculos.put(parqueaderoEscogido,registroUsu);
+            break;
+        }
     }
     public void cerrarRegistro(String Parquin){
-
     }
 }

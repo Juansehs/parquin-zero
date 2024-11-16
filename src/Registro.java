@@ -9,9 +9,27 @@ public class Registro {
     private LocalDateTime horaSalida;
     private Usuario usuario;
 
-    public Registro(Vehiculo vehiculo, LocalDateTime horaEntrada) {
+    public Registro() {
+    }
+    public Registro(Vehiculo vehiculo, LocalDateTime horaEntrada,Usuario usuario) {
         this.vehiculo = vehiculo;
         this.horaEntrada = horaEntrada;
+        this.usuario = usuario;
+    }
+
+    public void setVehiculo(Vehiculo vehiculo) {
+        this.vehiculo = vehiculo;
+    }
+
+    public void setHoraEntrada(LocalDateTime horaEntrada) {
+        this.horaEntrada = horaEntrada;
+    }
+    public Usuario getUsuario() {
+        return usuario;
+    }
+    //puede ser
+    public void setUsuario(Usuario usuario) {
+        this.usuario = usuario;
     }
 
     public void registrarSalida() {
@@ -44,7 +62,11 @@ public class Registro {
         return estudiantes;
     }
 
-
+    public void realizarRegistro(){
+        this.setUsuario(this.agregarUsuario());
+        this.setVehiculo(this.agregarVehiculo());
+        this.setHoraEntrada(LocalDateTime.now());
+    }
     public Usuario agregarUsuario() {
         Scanner input = new Scanner(System.in);
         System.out.println(" Escriba su Numero de Cedula : ");

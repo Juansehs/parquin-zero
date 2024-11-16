@@ -3,6 +3,10 @@ public class Main {
         Parqueadero par1 = new Parqueadero();
         String[] parqueaderos = {"a01","a02","a03","a04","b01","b02","b03"};
         par1.setParquins(parqueaderos);
+        par1.setNombre("Parqueadero Sur");
         par1.agregarRegistro();
+        par1.agregarRegistro();
+        par1.agregarRegistro();
+        par1.mostrarVehiculosActivosParquedero();
     }
 }
