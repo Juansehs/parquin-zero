@@ -90,45 +90,45 @@ public class Parqueadero {
                         .filter(registro -> !registro.getHoraEntrada().isBefore(fechaInicio) && !registro.getHoraEntrada().isAfter(fechaFin))
                         .toList();
                 if (!registrosFiltrados.isEmpty()) {
-                    System.out.println("Registros dentro del rango seleccionado:");
+                    System.out.println("Estos son los vehiculos que han estado el dia de hoy(no estan los vehiculos que se encuentran actualmente):");
                     for (Registro registro : registrosFiltrados) {
                         System.out.println("\nfecha de entrada: " + registro.getHoraEntrada().getDayOfMonth() + "/" + registro.getHoraEntrada().getMonthValue() + "/" + registro.getHoraEntrada().getYear() + " " + registro.getHoraEntrada().getHour() + ":" + registro.getHoraEntrada().getMinute());
                         registro.getUsuario().mostrarInfo();
                         registro.getVehiculo().infoVehiculo();
                     }
                 } else {
-                    System.out.println("No hay registros en el rango de fechas proporcionado.");
+                    System.out.println("No hay registros de vehiculos el dia de hoy.");
                 }
                 break;
             case 3:
                 System.out.println("Ingrese la fecha de inicio:");
                 System.out.print("Día: ");
-                int diaInicio = Integer.parseInt(input.next());
+                int diaInicio = input.nextInt();
                 System.out.print("Mes (1-12): ");
-                int mesInicio = Integer.parseInt(input.next());
+                int mesInicio = input.nextInt();
                 System.out.print("Año: ");
-                int anoInicio = Integer.parseInt(input.next());
+                int anoInicio = input.nextInt();
                 System.out.println("Ingrese la fecha de fin:");
                 System.out.print("Día: ");
-                int diaFin = Integer.parseInt(input.next());
+                int diaFin = input.nextInt();
                 System.out.print("Mes (1-12): ");
-                int mesFin = Integer.parseInt(input.next());
+                int mesFin = input.nextInt();
                 System.out.print("Año: ");
-                int anoFin = Integer.parseInt(input.next());
+                int anoFin = input.nextInt();
                 fechaInicio = LocalDateTime.of(anoInicio, mesInicio, diaInicio, 0, 0);
                 fechaFin = LocalDateTime.of(anoFin, mesFin, diaFin, 23, 59);
                 registrosFiltrados = historialTotalVehiculos.stream()
                         .filter(registro -> !registro.getHoraEntrada().isBefore(fechaInicio) && !registro.getHoraEntrada().isAfter(fechaFin))
                         .toList();
                 if (!registrosFiltrados.isEmpty()) {
-                    System.out.println("Registros dentro del rango seleccionado:");
+                    System.out.println("Estos son los vehiculos que se encuentran en las fechas dadas:");
                     for (Registro registro : registrosFiltrados) {
                         System.out.println("\nfecha de entrada: " + registro.getHoraEntrada().getDayOfMonth() + "/" + registro.getHoraEntrada().getMonthValue() + "/" + registro.getHoraEntrada().getYear() + " " + registro.getHoraEntrada().getHour() + ":" + registro.getHoraEntrada().getMinute());
                         registro.getUsuario().mostrarInfo();
                         registro.getVehiculo().infoVehiculo();
                     }
                 } else {
-                    System.out.println("No hay registros en el rango de fechas proporcionado.");
+                    System.out.println("No hay registros en las fechas proporcionado.");
                 }
                 break;
             default:

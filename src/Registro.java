@@ -27,7 +27,7 @@ public class Registro {
     public Usuario getUsuario() {
         return usuario;
     }
-    //puede ser
+
     public void setUsuario(Usuario usuario) {
         this.usuario = usuario;
     }
@@ -91,9 +91,7 @@ public class Registro {
             return visitante1;
         }
 
-
     }
-
 
     public HashMap<String, Docente> conseguirDocentes() {
         Docente docente1 = new Docente();
@@ -106,7 +104,7 @@ public class Registro {
 
     public HashMap<String, Visitante> conseguirVisitantes() {
         Visitante visitante1 = new Visitante();
-        visitante1.setNombre("anuel");
+        visitante1.setNombre("duki");
         visitante1.setCedula("826");
         HashMap<String, Visitante> visitantes = new HashMap<>();
         visitantes.put(visitante1.getCedula(), visitante1);
@@ -141,7 +139,6 @@ public class Registro {
                     System.out.println(" Tienes que digitar las opciones correspodinetes! ");
             }
         }
-
 
     }
 

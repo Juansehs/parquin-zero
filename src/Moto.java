@@ -29,6 +29,6 @@ private String cilindraje;
 
     @Override
     void infoVehiculo() {
-        System.out.println("La moto: "+getreferencia()+",tiene como placa:"+ getPlaca()+", tiene : "+getCilindraje()+" de cilindraje");
+        System.out.println("La moto: "+getreferencia()+", tiene como placa:"+ getPlaca()+", tiene : "+getCilindraje()+" de cilindraje");
     }
 }

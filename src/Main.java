@@ -5,7 +5,17 @@ import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
-        List<Parqueadero> parqueaderos = getParqueaderos();
+        List<Parqueadero> parqueaderos = new ArrayList<>();
+        Parqueadero par1 = new Parqueadero();
+        String[] parqueaderos1 = {"a01","a02","a03","a04","b01","b02","b03","b04"};
+        par1.setParquins(parqueaderos1);
+        par1.setNombre("Parqueadero Sur");
+        Parqueadero par2 = new Parqueadero();
+        String[] parqueaderos2 = {"a01","a02","b01","b02","c01","c02","d01","d02"};
+        par2.setParquins(parqueaderos2);
+        par2.setNombre("Parqueadero Norte");
+        parqueaderos.add(par1);
+        parqueaderos.add(par2);
         cicloMenu:
         while(true){
             System.out.println("  -------------------------- \n| Bienvenido al Parquin Zero |\n  -------------------------- ");
@@ -32,24 +42,10 @@ public class Main {
                 case 5:
                     continue;
                 case 6:
+                    System.out.println("Adios...");
                     break cicloMenu;
                 default: System.out.println("Opcion incorrecta, vuelva a intentarlo");
             }
         }
-    }
-
-    private static List<Parqueadero> getParqueaderos() {
-        List<Parqueadero> parqueaderos = new ArrayList<>();
-        Parqueadero par1 = new Parqueadero();
-        String[] parqueaderos1 = {"a01","a02","a03","a04","b01","b02","b03","b04"};
-        par1.setParquins(parqueaderos1);
-        par1.setNombre("Parqueadero Sur");
-        Parqueadero par2 = new Parqueadero();
-        String[] parqueaderos2 = {"a01","a02","b01","b02","c01","c02","d01","d02"};
-        par2.setParquins(parqueaderos2);
-        par2.setNombre("Parqueadero Norte");
-        parqueaderos.add(par1);
-        parqueaderos.add(par2);
-        return parqueaderos;
     }
 }
