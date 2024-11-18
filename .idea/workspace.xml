@@ -4,8 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="91cd8d18-e955-47a5-9953-cb7a7fc5ff52" name="Changes" comment="">
+    <list default="true" id="91cd8d18-e955-47a5-9953-cb7a7fc5ff52" name="Changes" comment="Listas Añadidas en usuarios de parqueadero">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Parqueadero.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Parqueadero.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Registro.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Registro.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -22,12 +24,12 @@
     &quot;assignee&quot;: &quot;Juansehs&quot;
   }
 }</component>
-  <component name="GithubPullRequestsUISettings">{
-  &quot;selectedUrlAndAccountId&quot;: {
-    &quot;url&quot;: &quot;https://github.com/Juansehs/parquin-zero.git&quot;,
-    &quot;accountId&quot;: &quot;8dc2d49a-a4b7-4544-b556-202a1ba9999e&quot;
+  <component name="GithubPullRequestsUISettings"><![CDATA[{
+  "selectedUrlAndAccountId": {
+    "url": "https://github.com/Juansehs/parquin-zero.git",
+    "accountId": "e73a0cdf-6f81-4ba2-a94d-29447efcadc9"
   }
-}</component>
+}]]></component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 5
 }</component>
@@ -72,6 +74,19 @@
       <option name="presentableId" value="Default" />
       <updated>1731531028859</updated>
     </task>
+    <task id="LOCAL-00001" summary="Listas Añadidas en usuarios de parqueadero">
+      <option name="closed" value="true" />
+      <created>1731899344480</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1731899344480</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Listas Añadidas en usuarios de parqueadero" />
+    <option name="LAST_COMMIT_MESSAGE" value="Listas Añadidas en usuarios de parqueadero" />
   </component>
 </project>

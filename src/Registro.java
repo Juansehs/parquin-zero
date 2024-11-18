@@ -88,14 +88,11 @@ public Usuario agregarUsuario() {
     String cedula = input.next();
     HashMap<String, Estudiante> estudiantes = this.conseguirEstudiantes();
     HashMap<String, Docente> docentes = this.conseguirDocentes();
-    HashMap<String, Visitante> visitantes = this.conseguirVisitantes();
-    if (estudiantes.containsKey(cedula))
+    if (estudiantes.containsKey(cedula)) {
         return estudiantes.get(cedula);
-    if (docentes.containsKey(cedula))
+    }if (docentes.containsKey(cedula)) {
         return docentes.get(cedula);
-    if (visitantes.containsKey(cedula))
-        return visitantes.get(cedula);
-    else {
+    }else {
         Visitante visitante1 = new Visitante();
         visitante1.setCedula(cedula);
         System.out.println(" Ingrese su Nombre ");
@@ -128,14 +125,7 @@ public HashMap<String, Docente> conseguirDocentes() {
 
 }
 
-public HashMap<String, Visitante> conseguirVisitantes() {
-    Visitante visitante1 = new Visitante();
-    visitante1.setNombre("duki");
-    visitante1.setCedula("826");
-    HashMap<String, Visitante> visitantes = new HashMap<>();
-    visitantes.put(visitante1.getCedula(), visitante1);
-    return visitantes;
-}
+
 
 public Vehiculo agregarVehiculo() {
     Scanner input = new Scanner(System.in);

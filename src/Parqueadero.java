@@ -180,12 +180,11 @@ public class Parqueadero {
         }
 
     }
-    public void cerrarRegistro(String cedula){
+    public void cerrarRegistro(String cedula,String placa){
         String parqueaderoVehiculo = null;
         for(String key : getVehiculos().keySet()){
-            if(Objects.equals(getVehiculos().get(key).getUsuario().getCedula(), cedula)){
+            if(Objects.equals(getVehiculos().get(key).getUsuario().getCedula(), cedula) && Objects.equals(getVehiculos().get(key).getVehiculo().getPlaca(), placa)){
                 parqueaderoVehiculo = key;
-                break;
             }
         }
         if(parqueaderoVehiculo!=null){
@@ -195,6 +194,6 @@ public class Parqueadero {
             historialTotalVehiculos.add(getVehiculos().get(parqueaderoVehiculo));
             getVehiculos().remove(parqueaderoVehiculo);
         }else
-            System.out.println("No hay ningun vehiculo registrado en este parqueadero con ese numero de cedula");
+            System.out.println("No hay ningun vehiculo registrado en este parqueadero con ese numero de cedula y/o placa");
     }
 }

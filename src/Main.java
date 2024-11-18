@@ -31,7 +31,10 @@ public class Main {
                     break;
                 case 2:
                     System.out.println("Escriba su numero de cedula: ");
-                    parqueaderoEscogido.cerrarRegistro(input.next());
+                    String cedula = input.next();
+                    System.out.println("Escriba su placa: ");
+                    String placa = input.next();
+                    parqueaderoEscogido.cerrarRegistro(cedula,placa);
                     break;
                 case 3:
                     parqueaderoEscogido.mostrarVehiculosActivosParquedero();
