@@ -56,7 +56,7 @@ public class Registro {
     public HashMap<String, Estudiante> conseguirEstudiantes() {
         Estudiante estudiante1 = new Estudiante();
         estudiante1.setNombre("Jose");
-        estudiante1.setCedula("456322");
+        estudiante1.setCedula("032");
         HashMap<String, Estudiante> estudiantes = new HashMap<>();
         estudiantes.put(estudiante1.getCedula(), estudiante1);
         return estudiantes;
@@ -82,10 +82,10 @@ public class Registro {
             return visitantes.get(cedula);
         else {
             Visitante visitante1 = new Visitante();
-            System.out.println("Ingrese su Cedula ");
-            visitante1.setCedula(input.next());
+            visitante1.setCedula(cedula);
             System.out.println(" Ingrese su Nombre ");
             visitante1.setNombre(input.next());
+            input.nextLine();
             System.out.println("Ingrese su Motivo de Visita ");
             visitante1.setMotivoVisita(input.nextLine());
             return visitante1;
@@ -98,7 +98,7 @@ public class Registro {
     public HashMap<String, Docente> conseguirDocentes() {
         Docente docente1 = new Docente();
         docente1.setNombre("Andrea");
-        docente1.setCedula("453422");
+        docente1.setCedula("1003");
         HashMap<String, Docente> docentes = new HashMap<>();
         docentes.put(docente1.getCedula(), docente1);
         return docentes;
@@ -106,8 +106,8 @@ public class Registro {
 
     public HashMap<String, Visitante> conseguirVisitantes() {
         Visitante visitante1 = new Visitante();
-        visitante1.setNombre("Andrea");
-        visitante1.setCedula("453422");
+        visitante1.setNombre("anuel");
+        visitante1.setCedula("826");
         HashMap<String, Visitante> visitantes = new HashMap<>();
         visitantes.put(visitante1.getCedula(), visitante1);
         return visitantes;

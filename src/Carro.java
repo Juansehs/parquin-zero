@@ -23,6 +23,6 @@ public class Carro extends Vehiculo {
 
     @Override
     void infoVehiculo() {
-        System.out.println("El auto:"+getModelo()+"tiene como placa:"+getPlaca()+"es de la marca "+getMarca());
+        System.out.println("El auto:"+getModelo()+" tiene como placa:"+getPlaca()+", es de la marca "+getMarca());
     }
 }

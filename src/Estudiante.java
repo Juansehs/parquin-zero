@@ -1,3 +1,5 @@
+import java.util.List;
+
 public class Estudiante extends Usuario{
     private boolean activo;
 
@@ -15,11 +17,11 @@ public class Estudiante extends Usuario{
     @Override
     public void mostrarInfo(){
         System.out.println("El usuario es Estudiante, nombre: "+getNombre()+", documento: "+getCedula()+", el usuario esta "+(getActivo() ? "Activo":"Desactivo")+" en el sistema");
-        if(getObjetos().length!=0){
-            String[] objetos = getObjetos().clone();
+        if(!getObjetos().isEmpty()){
+            List<String> objetos = getObjetos();
             System.out.println("Objetos que trae el usuario: ");
-            for (int i=0;i<objetos.length;i++){
-                System.out.println("("+i+") "+objetos[i]);
+            for (int i=0;i<objetos.size();i++){
+                System.out.println("("+i+") "+objetos.get(i));
             }
         }
     }
